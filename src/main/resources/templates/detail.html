@@ -2,13 +2,18 @@
 <html lang="cs" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Můj blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-</head>
+    <title>Seznam článků</title>
 </head>
 <body>
-<h1>Tady bude můj blog…</h1>
+<main class="container">
+    <h1 th:utext="${detail.title}">Seznam článků</h1>
+    <h3 th:utext="${detail.published}">Seznam článků</h3>
+    <p th:utext="${detail.perex}">Seznam článků</p>
+    <h5 th:utext="${detail.author}">Seznam článků</h5>
+    <p th:utext="${detail.body}">Seznam článků</p>
+    <a class="btn btn-outline-warning btn-lg" href="/">Zpět</a>
+</main>
 </body>
 </html>
